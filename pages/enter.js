@@ -39,9 +39,10 @@ function SignInButton() {
   )
 }
 
-// Sign out button
+// Sign out button - replaced to redirect to homepage if user is logged in + username is set
 function SignOutButton() {
-  return <button onClick={() => auth.signOut()}>Sign Out</button>
+  //return <button onClick={() => auth.signOut()}>Sign Out</button>
+  return Router.push('/')
 }
 
 // Username form
