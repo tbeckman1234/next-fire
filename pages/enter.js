@@ -19,7 +19,7 @@ export default function EnterPage(props) {
   return (
     <main>
         {user ?
-          !username ? <UsernameForm /> : <SignOutButton />
+          !username ? <UsernameForm /> : RedirectToHome()
           :
           <SignInButton />
         
@@ -40,9 +40,11 @@ function SignInButton() {
 }
 
 // Sign out button - replaced to redirect to homepage if user is logged in + username is set
-function SignOutButton() {
-  //return <button onClick={() => auth.signOut()}>Sign Out</button>
-  return Router.push('/')
+// function SignOutButton() {
+//   return <button onClick={() => auth.signOut()}>Sign Out</button>
+// }
+function RedirectToHome() {
+  Router.push('/')
 }
 
 // Username form
